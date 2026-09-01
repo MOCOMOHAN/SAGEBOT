@@ -111,73 +111,73 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
   ];
 
   return (
-    <div id="progress-view" class="flex flex-col gap-6 w-full animate-fadeIn">
+    <div id="progress-view" className="flex flex-col gap-6 w-full animate-fadeIn">
       {/* Top Metric Cards Row - Tricolored Neumorphism */}
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {/* Card 1: Total Study Hours */}
-        <div class="rounded-3xl bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-5 flex items-center justify-between">
+        <div className="rounded-3xl bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-5 flex items-center justify-between">
           <div>
-            <span class="text-[11px] uppercase font-bold text-gray-500 tracking-wider">
+            <span className="text-[11px] uppercase font-bold text-gray-500 tracking-wider">
               Total Studied
             </span>
-            <h3 class="text-2xl font-extrabold text-blue-600 tracking-tight mt-0.5">
+            <h3 className="text-2xl font-extrabold text-blue-600 tracking-tight mt-0.5">
               {overallStats.totalHours} hrs
             </h3>
-            <p class="text-[10px] text-gray-500 mt-1">{overallStats.totalMinutes} total minutes</p>
+            <p className="text-[10px] text-gray-500 mt-1">{overallStats.totalMinutes} total minutes</p>
           </div>
-          <div class="w-12 h-12 rounded-2xl bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] flex items-center justify-center text-xl text-blue-600">
+          <div className="w-12 h-12 rounded-2xl bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] flex items-center justify-center text-xl text-blue-600">
             ⏳
           </div>
         </div>
 
         {/* Card 2: Current Streak & Multiplier */}
-        <div class="rounded-3xl bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-5 flex items-center justify-between border-l-4 border-orange-500">
+        <div className="rounded-3xl bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-5 flex items-center justify-between border-l-4 border-orange-500">
           <div>
-            <span class="text-[11px] uppercase font-bold text-gray-500 tracking-wider">
+            <span className="text-[11px] uppercase font-bold text-gray-500 tracking-wider">
               Study Streak
             </span>
-            <h3 class="text-2xl font-extrabold text-orange-500 tracking-tight mt-0.5 flex items-center gap-1">
+            <h3 className="text-2xl font-extrabold text-orange-500 tracking-tight mt-0.5 flex items-center gap-1">
               🔥 {streakState.currentStreak} Days
             </h3>
-            <p class="text-[10px] text-gray-500 mt-1">Best record: {streakState.bestStreak} days</p>
+            <p className="text-[10px] text-gray-500 mt-1">Best record: {streakState.bestStreak} days</p>
           </div>
-          <div class="w-12 h-12 rounded-2xl bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] flex items-center justify-center text-xl text-orange-500">
+          <div className="w-12 h-12 rounded-2xl bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] flex items-center justify-center text-xl text-orange-500">
             ⚡
           </div>
         </div>
 
         {/* Card 3: Currency & Credits */}
-        <div class="rounded-3xl bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-5 flex items-center justify-between">
+        <div className="rounded-3xl bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-5 flex items-center justify-between">
           <div>
-            <span class="text-[11px] uppercase font-bold text-gray-500 tracking-wider">
+            <span className="text-[11px] uppercase font-bold text-gray-500 tracking-wider">
               Goal Credits
             </span>
-            <h3 class="text-2xl font-extrabold text-emerald-600 tracking-tight mt-0.5">
+            <h3 className="text-2xl font-extrabold text-emerald-600 tracking-tight mt-0.5">
               🪙 {streakState.credits}
             </h3>
-            <p class="text-[10px] text-gray-500 mt-1">+25 per task • +10 per session</p>
+            <p className="text-[10px] text-gray-500 mt-1">+25 per task • +10 per session</p>
           </div>
-          <div class="w-12 h-12 rounded-2xl bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] flex items-center justify-center text-xl text-emerald-600">
+          <div className="w-12 h-12 rounded-2xl bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] flex items-center justify-center text-xl text-emerald-600">
             💰
           </div>
         </div>
 
         {/* Card 4: Tasks Completion Rate */}
-        <div class="rounded-3xl bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-5 flex items-center justify-between">
+        <div className="rounded-3xl bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-5 flex items-center justify-between">
           <div>
-            <span class="text-[11px] uppercase font-bold text-gray-500 tracking-wider">
+            <span className="text-[11px] uppercase font-bold text-gray-500 tracking-wider">
               Tasks Cleared
             </span>
-            <h3 class="text-2xl font-extrabold text-purple-600 tracking-tight mt-0.5">
+            <h3 className="text-2xl font-extrabold text-purple-600 tracking-tight mt-0.5">
               {overallStats.completedTasksCount} / {overallStats.totalTasksCount}
             </h3>
-            <p class="text-[10px] text-gray-500 mt-1">
+            <p className="text-[10px] text-gray-500 mt-1">
               {overallStats.totalTasksCount > 0
                 ? `${Math.round((overallStats.completedTasksCount / overallStats.totalTasksCount) * 100)}% completion`
                 : '0%'}
             </p>
           </div>
-          <div class="w-12 h-12 rounded-2xl bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] flex items-center justify-center text-xl text-purple-600">
+          <div className="w-12 h-12 rounded-2xl bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] flex items-center justify-center text-xl text-purple-600">
             🎯
           </div>
         </div>
@@ -186,24 +186,24 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
       {/* Main Chart Section: Hours Spent Per Subject Per Day */}
       <section
         id="daily-hours-chart-section"
-        class="rounded-[36px] bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-6 lg:p-8 flex flex-col gap-6"
+        className="rounded-[36px] bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-6 lg:p-8 flex flex-col gap-6"
       >
-        <div class="flex flex-wrap items-center justify-between gap-4">
+        <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <h3 class="text-xl font-bold text-gray-800 tracking-tight">
+            <h3 className="text-xl font-bold text-gray-800 tracking-tight">
               Hours Spent Per Subject Per Day
             </h3>
-            <p class="text-xs text-gray-500 font-medium mt-0.5">
+            <p className="text-xs text-gray-500 font-medium mt-0.5">
               Daily time investment visualization and breakdown
             </p>
           </div>
 
           {/* Controls: Subject Filter & Range Toggle */}
-          <div class="flex items-center gap-3">
+          <div className="flex items-center gap-3">
             <select
               value={selectedSubjectId}
               onChange={(e) => setSelectedSubjectId(e.target.value)}
-              class="bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] rounded-xl px-3 py-1.5 text-xs font-bold text-gray-700 border-none outline-none"
+              className="bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] rounded-xl px-3 py-1.5 text-xs font-bold text-gray-700 border-none outline-none"
             >
               <option value="all">All Subjects (Combined)</option>
               {subjects.map((s) => (
@@ -213,13 +213,13 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
               ))}
             </select>
 
-            <div class="flex bg-[#e0e5ec] shadow-[inset_2px_2px_5px_#b8b9be,inset_-2px_-2px_5px_#ffffff] p-1 rounded-xl">
+            <div className="flex bg-[#e0e5ec] shadow-[inset_2px_2px_5px_#b8b9be,inset_-2px_-2px_5px_#ffffff] p-1 rounded-xl">
               <button
                 onClick={() => {
                   playClickSound();
                   setTimeRange('week');
                 }}
-                class={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+                className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
                   timeRange === 'week' ? 'bg-[#e0e5ec] shadow-[3px_3px_6px_#b8b9be,-3px_-3px_6px_#ffffff] text-blue-600' : 'text-gray-500'
                 }`}
               >
@@ -230,7 +230,7 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
                   playClickSound();
                   setTimeRange('month');
                 }}
-                class={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+                className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
                   timeRange === 'month' ? 'bg-[#e0e5ec] shadow-[3px_3px_6px_#b8b9be,-3px_-3px_6px_#ffffff] text-blue-600' : 'text-gray-500'
                 }`}
               >
@@ -241,19 +241,19 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
         </div>
 
         {/* Visual Multi-Bar Inset Chart */}
-        <div class="h-64 sm:h-72 w-full flex items-end justify-between gap-3 sm:gap-6 px-2 sm:px-6 pt-4 pb-2 border-b border-gray-300/60">
+        <div className="h-64 sm:h-72 w-full flex items-end justify-between gap-3 sm:gap-6 px-2 sm:px-6 pt-4 pb-2 border-b border-gray-300/60">
           {dailySubjectData.map((day, idx) => (
-            <div key={idx} class="flex-1 flex flex-col items-center gap-2 group h-full justify-end">
+            <div key={idx} className="flex-1 flex flex-col items-center gap-2 group h-full justify-end">
               {/* Tooltip / Hours badge */}
-              <div class="text-[11px] font-bold text-gray-600 bg-white/70 px-2 py-0.5 rounded-md shadow-xs opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all">
+              <div className="text-[11px] font-bold text-gray-600 bg-white/70 px-2 py-0.5 rounded-md shadow-xs opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all">
                 {day.hours}h
               </div>
 
               {/* Inset Pill Track with Stacked Subject Bars */}
-              <div class="w-full max-w-[48px] h-48 bg-[#e0e5ec] shadow-[inset_4px_4px_8px_#b8b9be,inset_-4px_-4px_8px_#ffffff] rounded-2xl relative overflow-hidden flex flex-col justify-end p-1">
+              <div className="w-full max-w-[48px] h-48 bg-[#e0e5ec] shadow-[inset_4px_4px_8px_#b8b9be,inset_-4px_-4px_8px_#ffffff] rounded-2xl relative overflow-hidden flex flex-col justify-end p-1">
                 {selectedSubjectId === 'all' ? (
                   // Multi-subject stacked slices
-                  <div class="w-full flex flex-col-reverse rounded-xl overflow-hidden shadow-sm">
+                  <div className="w-full flex flex-col-reverse rounded-xl overflow-hidden shadow-sm">
                     {subjects.map((sub) => {
                       const subMins = day.subjectBreakdown[sub.id] || 0;
                       if (subMins === 0) return null;
@@ -269,7 +269,7 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
                             backgroundColor: sub.color,
                           }}
                           title={`${sub.name}: ${subMins}m`}
-                          class="w-full transition-all duration-500 hover:brightness-110"
+                          className="w-full transition-all duration-500 hover:brightness-110"
                         />
                       );
                     })}
@@ -277,7 +277,7 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
                 ) : (
                   // Single Subject Bar
                   <div
-                    class="w-full rounded-xl transition-all duration-700 ease-out shadow-sm"
+                    className="w-full rounded-xl transition-all duration-700 ease-out shadow-sm"
                     style={{
                       height: `${day.fillPercentage}%`,
                       backgroundColor: subjects.find((s) => s.id === selectedSubjectId)?.color || '#3b82f6',
@@ -287,25 +287,25 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
               </div>
 
               {/* Day Label */}
-              <div class="text-center">
+              <div className="text-center">
                 <span
-                  class={`text-[11px] font-bold uppercase tracking-tight block ${
+                  className={`text-[11px] font-bold uppercase tracking-tight block ${
                     day.isToday ? 'text-blue-600 font-extrabold scale-110' : 'text-gray-500'
                   }`}
                 >
                   {day.dayName}
                 </span>
-                <span class="text-[9px] text-gray-400 block">{day.dateStr.slice(5)}</span>
+                <span className="text-[9px] text-gray-400 block">{day.dateStr.slice(5)}</span>
               </div>
             </div>
           ))}
         </div>
 
         {/* Legend */}
-        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           {subjects.map((sub) => (
-            <div key={sub.id} class="flex items-center gap-1.5 text-xs font-bold text-gray-600">
-              <span class="w-3 h-3 rounded-md shadow-xs" style={{ backgroundColor: sub.color }}></span>
+            <div key={sub.id} className="flex items-center gap-1.5 text-xs font-bold text-gray-600">
+              <span className="w-3 h-3 rounded-md shadow-xs" style={{ backgroundColor: sub.color }}></span>
               <span>{sub.icon} {sub.name}</span>
             </div>
           ))}
@@ -313,41 +313,41 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
       </section>
 
       {/* Split Grid: Subject Goals Breakdown & Streak Rewards Ladder */}
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left (7 cols): Subject Targets & Progress */}
         <section
           id="subject-goals-breakdown"
-          class="lg:col-span-7 rounded-[36px] bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-6 lg:p-7 flex flex-col gap-4"
+          className="lg:col-span-7 rounded-[36px] bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-6 lg:p-7 flex flex-col gap-4"
         >
           <div>
-            <h3 class="text-lg font-bold text-gray-800 tracking-tight">
+            <h3 className="text-lg font-bold text-gray-800 tracking-tight">
               Subject Study Goals vs. Actual Hours
             </h3>
-            <p class="text-xs text-gray-500 font-medium">
+            <p className="text-xs text-gray-500 font-medium">
               Weekly progress toward target mastery hours
             </p>
           </div>
 
-          <div class="space-y-4 flex-1">
+          <div className="space-y-4 flex-1">
             {overallStats.subjectStats.map((item) => (
               <div
                 key={item.subject.id}
-                class="p-4 rounded-2xl bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] flex flex-col gap-2"
+                className="p-4 rounded-2xl bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] flex flex-col gap-2"
               >
-                <div class="flex items-center justify-between text-xs">
-                  <div class="flex items-center gap-2">
-                    <span class="text-base">{item.subject.icon}</span>
-                    <strong class="font-bold text-gray-800 text-sm">{item.subject.name}</strong>
+                <div className="flex items-center justify-between text-xs">
+                  <div className="flex items-center gap-2">
+                    <span className="text-base">{item.subject.icon}</span>
+                    <strong className="font-bold text-gray-800 text-sm">{item.subject.name}</strong>
                   </div>
-                  <div class="font-bold text-gray-700">
-                    <span class="text-blue-600 font-extrabold">{item.hours}h</span> / {item.targetHours}h target ({item.progressPercent}%)
+                  <div className="font-bold text-gray-700">
+                    <span className="text-blue-600 font-extrabold">{item.hours}h</span> / {item.targetHours}h target ({item.progressPercent}%)
                   </div>
                 </div>
 
                 {/* Neumorphic Inset Meter Bar */}
-                <div class="w-full h-3 bg-[#e0e5ec] shadow-[inset_2px_2px_4px_#b8b9be,inset_-2px_-2px_4px_#ffffff] rounded-full overflow-hidden p-0.5">
+                <div className="w-full h-3 bg-[#e0e5ec] shadow-[inset_2px_2px_4px_#b8b9be,inset_-2px_-2px_4px_#ffffff] rounded-full overflow-hidden p-0.5">
                   <div
-                    class="h-full rounded-full transition-all duration-800 ease-out"
+                    className="h-full rounded-full transition-all duration-800 ease-out"
                     style={{
                       width: `${item.progressPercent}%`,
                       backgroundColor: item.subject.color,
@@ -363,37 +363,37 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
         {/* Right (5 cols): Streak Achievements & Milestones */}
         <section
           id="streak-milestones-section"
-          class="lg:col-span-5 rounded-[36px] bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-6 lg:p-7 flex flex-col gap-4"
+          className="lg:col-span-5 rounded-[36px] bg-[#e0e5ec] shadow-[8px_8px_16px_#b8b9be,-8px_-8px_16px_#ffffff] p-6 lg:p-7 flex flex-col gap-4"
         >
           <div>
-            <h3 class="text-lg font-bold text-gray-800 tracking-tight flex items-center gap-2">
+            <h3 className="text-lg font-bold text-gray-800 tracking-tight flex items-center gap-2">
               <span>🔥</span> Streak Milestones & Rewards
             </h3>
-            <p class="text-xs text-gray-500 font-medium">
+            <p className="text-xs text-gray-500 font-medium">
               Complete daily goals to maintain streaks and unlock currency
             </p>
           </div>
 
-          <div class="space-y-3 flex-1">
+          <div className="space-y-3 flex-1">
             {streakMilestones.map((ms, idx) => (
               <div
                 key={idx}
-                class={`p-3.5 rounded-2xl flex items-center justify-between transition-all ${
+                className={`p-3.5 rounded-2xl flex items-center justify-between transition-all ${
                   ms.achieved
                     ? 'bg-[#e0e5ec] shadow-[inset_3px_3px_6px_#b8b9be,inset_-3px_-3px_6px_#ffffff] border-l-4 border-orange-500'
                     : 'bg-[#e0e5ec] shadow-[4px_4px_8px_#b8b9be,-4px_-4px_8px_#ffffff] opacity-75'
                 }`}
               >
-                <div class="flex items-center gap-3">
-                  <span class="text-2xl">{ms.icon}</span>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">{ms.icon}</span>
                   <div>
-                    <h4 class="font-bold text-xs text-gray-800">{ms.label}</h4>
-                    <p class="text-[10px] text-gray-500">{ms.days} Days Streak Goal</p>
+                    <h4 className="font-bold text-xs text-gray-800">{ms.label}</h4>
+                    <p className="text-[10px] text-gray-500">{ms.days} Days Streak Goal</p>
                   </div>
                 </div>
 
-                <div class="text-right">
-                  <span class={`text-xs font-bold ${ms.achieved ? 'text-emerald-600' : 'text-gray-400'}`}>
+                <div className="text-right">
+                  <span className={`text-xs font-bold ${ms.achieved ? 'text-emerald-600' : 'text-gray-400'}`}>
                     {ms.achieved ? '✓ Unlocked' : `+${ms.reward}🪙`}
                   </span>
                 </div>
@@ -401,7 +401,7 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
             ))}
           </div>
 
-          <div class="p-3.5 rounded-2xl bg-orange-50/80 border border-orange-200 text-center text-xs text-orange-900 font-medium shadow-sm">
+          <div className="p-3.5 rounded-2xl bg-orange-50/80 border border-orange-200 text-center text-xs text-orange-900 font-medium shadow-sm">
             🔥 Keep studying 15+ minutes or clear 1 task daily to preserve your streak!
           </div>
         </section>

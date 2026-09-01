@@ -77,6 +77,36 @@ export function playTimerFinishSound() {
   }
 }
 
+export function playLevelUpSound() {
+  try {
+    const ctx = getAudioContext();
+    if (!ctx) return;
+
+    const now = ctx.currentTime;
+    // Ascending celebratory fanfare
+    const notes = [440, 554.37, 659.25, 880, 1108.73]; // A4, C#5, E5, A5, C#6
+    notes.forEach((freq, i) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, now + i * 0.07);
+
+      gain.gain.setValueAtTime(0, now + i * 0.07);
+      gain.gain.linearRampToValueAtTime(0.22, now + i * 0.07 + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.07 + 0.45);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(now + i * 0.07);
+      osc.stop(now + i * 0.07 + 0.5);
+    });
+  } catch {
+    // Ignore
+  }
+}
+
 export function playClickSound() {
   try {
     const ctx = getAudioContext();
@@ -102,3 +132,5 @@ export function playClickSound() {
     // Ignore
   }
 }
+
+
