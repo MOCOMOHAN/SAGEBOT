@@ -3,6 +3,7 @@ import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI } from '@google/genai';
 import dotenv from 'dotenv';
+import { createClient } from '@supabase/supabase-js';
 
 dotenv.config();
 
@@ -21,6 +22,12 @@ function getGenAIClient(): GoogleGenAI | null {
     },
   });
 }
+
+//client for Supabase
+const supabase = createClient(
+  process.env.SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!  // never expose this to frontend
+);
 
 // Pre-curated educational knowledge base for YouTube suggestions
 const CURATED_YOUTUBE_RESOURCES: Record<
