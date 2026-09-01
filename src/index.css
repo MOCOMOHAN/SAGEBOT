@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --neu-base: #e0e5ec;
+    --neu-shadow-dark: #b8b9be;
+    --neu-shadow-light: #ffffff;
+    
+    /* Tricolor Identity */
+    --color-primary: #3b82f6;     /* Electric Blue */
+    --color-secondary: #f97316;   /* Solar Orange (Streaks / Heat) */
+    --color-tertiary: #10b981;    /* Mint Emerald (Success / Checkmarks) */
+    --color-purple: #8b5cf6;      /* Study Focus Purple */
+  }
+
+  body {
+    background-color: #e0e5ec;
+    color: #4a5568;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Neumorphic Extruded & Inset Utility Classes matching Sleek Interface */
+.neu-flat {
+  background-color: #e0e5ec;
+  box-shadow: 8px 8px 16px #b8b9be, -8px -8px 16px #ffffff;
+}
+
+.neu-flat-sm {
+  background-color: #e0e5ec;
+  box-shadow: 4px 4px 8px #b8b9be, -4px -4px 8px #ffffff;
+}
+
+.neu-flat-lg {
+  background-color: #e0e5ec;
+  box-shadow: 12px 12px 24px #b8b9be, -12px -12px 24px #ffffff;
+}
+
+.neu-pressed {
+  background-color: #e0e5ec;
+  box-shadow: inset 4px 4px 8px #b8b9be, inset -4px -4px 8px #ffffff;
+}
+
+.neu-pressed-sm {
+  background-color: #e0e5ec;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -2px -2px 5px #ffffff;
+}
+
+.neu-pressed-lg {
+  background-color: #e0e5ec;
+  box-shadow: inset 6px 6px 12px #b8b9be, inset -6px -6px 12px #ffffff;
+}
+
+/* Tricolor Button Styles */
+.neu-btn {
+  background-color: #e0e5ec;
+  box-shadow: 5px 5px 10px #b8b9be, -5px -5px 10px #ffffff;
+  transition: all 0.15s ease-in-out;
+}
+
+.neu-btn:hover {
+  box-shadow: 6px 6px 12px #b0b1b6, -6px -6px 12px #ffffff;
+}
+
+.neu-btn:active, .neu-btn-active {
+  box-shadow: inset 3px 3px 6px #b8b9be, inset -3px -3px 6px #ffffff !important;
+}
+
+.neu-btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow: 5px 5px 12px #b8b9be, -5px -5px 12px #ffffff, 0 0 12px rgba(59, 130, 246, 0.35);
+  color: #ffffff;
+  transition: all 0.15s ease-in-out;
+}
+
+.neu-btn-primary:active {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: inset 3px 3px 6px #1e40af, inset -3px -3px 6px #60a5fa !important;
+}
+
+.neu-btn-orange {
+  background: linear-gradient(135deg, #fb923c, #ea580c);
+  box-shadow: 5px 5px 12px #b8b9be, -5px -5px 12px #ffffff, 0 0 12px rgba(249, 115, 22, 0.35);
+  color: #ffffff;
+  transition: all 0.15s ease-in-out;
+}
+
+.neu-btn-emerald {
+  background: linear-gradient(135deg, #34d399, #059669);
+  box-shadow: 5px 5px 12px #b8b9be, -5px -5px 12px #ffffff, 0 0 12px rgba(16, 185, 129, 0.35);
+  color: #ffffff;
+  transition: all 0.15s ease-in-out;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #e0e5ec;
+  box-shadow: inset 2px 2px 4px #b8b9be, inset -2px -2px 4px #ffffff;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #bcc3cd;
+  border-radius: 8px;
+  border: 1px solid #e0e5ec;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9fa8b5;
+}
+
+/* Animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.92; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}

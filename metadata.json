@@ -1,0 +1,6 @@
+{
+  "name": "StudyOrbit - Student Study Planner & Assistant",
+  "description": "Tricolored neumorphic student study planner with subject task tracking, focus timer, analytics dashboard, streaks, reward currency, and concise AI subject assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
