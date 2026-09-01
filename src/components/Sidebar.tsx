@@ -61,7 +61,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     setMiniChatLogs((prev) => [...prev, { q: query, a: 'Thinking...', loading: true }]);
 
     try {
-      const res = await fetch('/api/chat', {
+      const res = await fetch('/api/gemini/solve-concept', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
